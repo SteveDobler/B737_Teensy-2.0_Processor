@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class formB737FMC
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formB737FMC))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -50,6 +50,9 @@ Partial Class Form1
         Me.btnLcdPower = New System.Windows.Forms.Button()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -77,6 +80,9 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.btnOfstOff)
         Me.GroupBox2.Controls.Add(Me.btnCallOff)
         Me.GroupBox2.Controls.Add(Me.btnMsgOff)
@@ -94,7 +100,7 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.btnFailOn)
         Me.GroupBox2.Location = New System.Drawing.Point(480, 84)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(250, 230)
+        Me.GroupBox2.Size = New System.Drawing.Size(250, 270)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "LED Test"
@@ -102,7 +108,7 @@ Partial Class Form1
         'btnOfstOff
         '
         Me.btnOfstOff.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btnOfstOff.Location = New System.Drawing.Point(166, 183)
+        Me.btnOfstOff.Location = New System.Drawing.Point(166, 188)
         Me.btnOfstOff.Name = "btnOfstOff"
         Me.btnOfstOff.Size = New System.Drawing.Size(62, 35)
         Me.btnOfstOff.TabIndex = 23
@@ -122,7 +128,7 @@ Partial Class Form1
         'btnMsgOff
         '
         Me.btnMsgOff.BackColor = System.Drawing.SystemColors.ButtonShadow
-        Me.btnMsgOff.Location = New System.Drawing.Point(166, 142)
+        Me.btnMsgOff.Location = New System.Drawing.Point(166, 146)
         Me.btnMsgOff.Name = "btnMsgOff"
         Me.btnMsgOff.Size = New System.Drawing.Size(62, 35)
         Me.btnMsgOff.TabIndex = 22
@@ -142,7 +148,7 @@ Partial Class Form1
         'btnFailOff
         '
         Me.btnFailOff.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btnFailOff.Location = New System.Drawing.Point(166, 101)
+        Me.btnFailOff.Location = New System.Drawing.Point(166, 103)
         Me.btnFailOff.Name = "btnFailOff"
         Me.btnFailOff.Size = New System.Drawing.Size(62, 35)
         Me.btnFailOff.TabIndex = 21
@@ -317,7 +323,35 @@ Partial Class Form1
         Me.Button11.Text = "EXIT"
         Me.Button11.UseVisualStyleBackColor = False
         '
-        'Form1
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Button1.Location = New System.Drawing.Point(166, 229)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(62, 35)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "ALL"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(111, 236)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(42, 20)
+        Me.TextBox1.TabIndex = 25
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Button2.Location = New System.Drawing.Point(34, 228)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(62, 35)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "ALL"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'formB737FMC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -327,8 +361,8 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "formB737FMC"
+        Me.Text = "B773 Configurator"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -363,4 +397,7 @@ Partial Class Form1
     Friend WithEvents btnMsgOff As Button
     Friend WithEvents btnExecOff As Button
     Friend WithEvents btnFailOff As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
 End Class
