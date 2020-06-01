@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formB737FMC
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,15 @@ Partial Class formB737FMC
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formB737FMC))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtAllLeds = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.btnOfstOff = New System.Windows.Forms.Button()
         Me.btnCallOff = New System.Windows.Forms.Button()
         Me.btnMsgOff = New System.Windows.Forms.Button()
@@ -50,9 +52,6 @@ Partial Class formB737FMC
         Me.btnLcdPower = New System.Windows.Forms.Button()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -69,19 +68,10 @@ Partial Class formB737FMC
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "COM10", "COM11", "COM12"})
-        Me.ComboBox1.Location = New System.Drawing.Point(328, 26)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(159, 21)
-        Me.ComboBox1.TabIndex = 15
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtAllLeds)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.btnOfstOff)
         Me.GroupBox2.Controls.Add(Me.btnCallOff)
@@ -104,6 +94,34 @@ Partial Class formB737FMC
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "LED Test"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(166, 229)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(62, 35)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "ALL OFF"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'txtAllLeds
+        '
+        Me.txtAllLeds.Location = New System.Drawing.Point(111, 236)
+        Me.txtAllLeds.Name = "txtAllLeds"
+        Me.txtAllLeds.Size = New System.Drawing.Size(42, 20)
+        Me.txtAllLeds.TabIndex = 25
+        Me.txtAllLeds.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button2.Location = New System.Drawing.Point(34, 228)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(62, 35)
+        Me.Button2.TabIndex = 24
+        Me.Button2.Text = "ALL ON"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'btnOfstOff
         '
@@ -323,41 +341,12 @@ Partial Class formB737FMC
         Me.Button11.Text = "EXIT"
         Me.Button11.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Button1.Location = New System.Drawing.Point(166, 229)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(62, 35)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "ALL"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(111, 236)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(42, 20)
-        Me.TextBox1.TabIndex = 25
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Button2.Location = New System.Drawing.Point(34, 228)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(62, 35)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "ALL"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'formB737FMC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(984, 450)
         Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -372,7 +361,6 @@ Partial Class formB737FMC
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtBoxOfst As TextBox
     Friend WithEvents txtBoxMsg As TextBox
@@ -398,6 +386,6 @@ Partial Class formB737FMC
     Friend WithEvents btnExecOff As Button
     Friend WithEvents btnFailOff As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtAllLeds As TextBox
     Friend WithEvents Button2 As Button
 End Class

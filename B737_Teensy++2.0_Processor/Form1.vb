@@ -1,9 +1,15 @@
 ﻿Public Class formB737FMC
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SerialPort1.Open()
+        txtBoxExec.Text = "OFF"
+        txtBoxCall.Text = "OFF"
+        txtBoxMsg.Text = "OFF"
+        txtBoxOfst.Text = "OFF"
+        txtBoxFail.Text = "OFF"
+        txtAllLeds.Text = "OFF"
 
     End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnLcdPower.Click
         SerialPort1.Write("#")
         SerialPort1.Write("P")
@@ -58,8 +64,11 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnLcdMenu.Click
+
         SerialPort1.Write("#")
         SerialPort1.Write("M")
+
+
     End Sub
 
     Private Sub btnCallOn_Click(sender As Object, e As EventArgs) Handles btnCallOn.Click
@@ -76,12 +85,12 @@
 
     Private Sub btnLcdPlus_Click(sender As Object, e As EventArgs) Handles btnLcdPlus.Click
         SerialPort1.Write("#")
-        SerialPort1.Write("+")
+        SerialPort1.Write("-")
     End Sub
 
     Private Sub btnLcdMinus_Click(sender As Object, e As EventArgs) Handles btnLcdMinus.Click
         SerialPort1.Write("#")
-        SerialPort1.Write("-")
+        SerialPort1.Write("+")
     End Sub
 
     Private Sub btnLcdAuto_Click(sender As Object, e As EventArgs) Handles btnLcdAuto.Click
@@ -94,14 +103,34 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        SerialPort1.Write("<")
+        SerialPort1.Write("Z")
+        txtAllLeds.Text = "ON"
+        txtAllLeds.Text = "ON"
+        txtBoxCall.Text = "ON"
+        txtBoxExec.Text = "ON"
+        txtBoxFail.Text = "ON"
+        txtBoxMsg.Text = "ON"
+        txtBoxOfst.Text = "ON"
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtAllLeds.TextChanged
 
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        SerialPort1.Write(">")
+        SerialPort1.Write("X")
+        txtAllLeds.Text = "OFF"
+        txtBoxCall.Text = "OFF"
+        txtBoxExec.Text = "OFF"
+        txtBoxFail.Text = "OFF"
+        txtBoxMsg.Text = "OFF"
+        txtBoxOfst.Text = "OFF"
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
+
 End Class
